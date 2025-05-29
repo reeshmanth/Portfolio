@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+@layer components {
+  /* --- Navigation Link --- */
+  .nav__link {
+    @apply relative text-base font-medium w-fit block text-white;
+  }
+
+  .nav__link::after {
+    content: '';
+    @apply block absolute h-[3px] bg-yellow-400 w-full scale-x-0 transition duration-300 origin-right;
+  }
+
+  .nav__link:hover::after {
+    @apply scale-x-100;
+  }
+
+  /* --- Text Gradient --- */
+  .text-bg {
+    background-image: linear-gradient(to right, #8750f7 0%, #ffffff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* --- Custom Scrollbar --- */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #44028f;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #c277fa;
+    border-radius: 4px;
+  }
+
+  /* --- Keyframes --- */
+  @keyframes blink-cursor {
+    0%, 100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+
+  @keyframes scroll-left-roll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes scroll-right-roll {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  .animate-scroll-left-roll {
+    animation: scroll-left-roll 30s linear infinite;
+  }
+  
+  .animate-scroll-right-roll {
+    animation: scroll-right-roll 30s linear infinite;
+  }
+  
+  
+
+  /* --- Base Layer Inside Components --- */
+  body {
+    @apply mx-0 px-0 overflow-x-hidden;
+  }
+}
