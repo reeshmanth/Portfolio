@@ -26,6 +26,11 @@
   }
 
   /* --- Custom Scrollbar --- */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #c277fa #44028f;
+  }
+
   .custom-scrollbar::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -38,6 +43,10 @@
   .custom-scrollbar::-webkit-scrollbar-thumb {
     background: #c277fa;
     border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #a855f7;
   }
 
   /* --- Keyframes --- */
@@ -80,6 +89,10 @@
 
   /* --- Base Layer Inside Components --- */
   body {
-    @apply mx-0 px-0 overflow-x-hidden;
+    @apply mx-0 px-0 overflow-x-hidden bg-[#0f0715];
+  }
+  
+  html {
+    @apply bg-[#0f0715];
   }
 }
