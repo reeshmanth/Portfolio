@@ -4,7 +4,6 @@ export const sectionMap: {
     | 'about'
     | 'education'
     | 'skills'
-    | 'services'
     | 'projects'
     | 'certificates'
     | 'contact'
@@ -13,7 +12,6 @@ export const sectionMap: {
   '#about': 'about',
   '#education': 'education',
   '#skills': 'skills',         
-  '#services': 'services',
   '#projects': 'projects',
   '#certificates': 'certificates',
   '#contact': 'contact',
